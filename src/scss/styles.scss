@@ -1,0 +1,172 @@
+@import 'typo';
+@import 'header';
+@import 'colors';
+@import 'button';
+@import 'override';
+
+body {
+    font-size: 14px;
+    line-height: 1.71429;
+    font-family: $ff-primary;
+    color: $primary-color;
+    background: #fff;
+    font-weight: 400;
+}
+
+.container {
+    @media (min-width: 1200px) {
+      max-width: 1200px !important;
+    }
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#00010c80,#00010cca), url('../assets/bg-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    color: #fff;
+
+    .leading-title {
+        display: inline-block;
+        font-size: 5rem;
+        font-weight: 600;
+
+        &:after {
+            content: "";
+            position: relative;
+            width: 20px;
+            height: 4px;
+            color: #3272ba;
+            padding: 1rem 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            font-size: 2.8rem;
+            line-height: 1.2;
+        }
+    }
+
+    .leading-paragraph {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 2;
+        margin: 0;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 1rem;
+          line-height: 1.8;
+        }
+    }
+}
+
+.section {
+  display: block;
+  padding: 120px 0;
+
+  @media only screen and (max-width: 992px) {
+    padding: 60px 0;
+
+    &__title {
+      margin-top: 3rem;
+    }
+  }
+
+  &--secondary {
+    background: $gray-color;
+  }
+
+  &__title {
+    font-size: 60px;
+    margin-bottom: 8px;
+    font-weight: 700;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    color: $secondary-color;
+    margin-bottom: 30px;
+
+    &--center {
+      text-align: center;
+
+      @media only screen and (min-width: 1200px) {
+        padding: 0 20%;
+      }   
+    }
+  }
+}
+
+.thumbnail {
+  display: block;
+  
+  img {
+    max-height: 700px;
+    width: 100%;
+    box-shadow: 0 25px 65px rgba(0,0,0,.1);
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.service {
+  display: block;
+  color: $primary-color;
+  background: $gray-color;
+  margin-top: 30px;
+  padding: 60px 45px;
+  border-radius: 10px;
+  height: calc(100% - 30px);
+  transition: all 0.4s ease !important;
+
+  &:hover {
+    color: #fff;
+    box-shadow: 0 10px 25px 10px rgba(0,0,0,.1);
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, $accent-color, darken($accent-color, 10%));
+
+    .icon svg path {
+      fill: #fff;
+    }
+
+    .content h3, .content p {
+      color: #fff;
+    }
+  }
+
+  .icon {
+    margin-bottom: 25px;
+  
+    svg {
+      width: 4em;
+      height: 4em;
+
+      path {
+        fill: $accent-color;
+      }
+    } 
+  }
+
+  .content {
+
+    h3 {
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      overflow-x: hidden;
+    }
+  
+    p {
+      font-size: 18px;
+      color: $secondary-color;
+    }
+  }
+}

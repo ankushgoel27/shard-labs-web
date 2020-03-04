@@ -1,0 +1,16 @@
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.row {
+    &--gutters--30 {
+        margin-right: -30px;
+        margin-left: -30px;
+
+        [class*=col-], [class=col] {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
