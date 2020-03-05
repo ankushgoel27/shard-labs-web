@@ -9,14 +9,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="scss/styles.scss">
+
+  <!-- SCRIPTS -->
+  <script defer src="scripts/index.js"></script>
 </head>
 
 <body>
   <header class="header header--transparent" data-aos="fade-down" data-aos-duration="1000">
     <div class="header__container">
+      <!-- HEADER LOGO -->
       <div class="header__logo">
         <img src="assets/logo.svg" alt="Shard Labs" />
       </div>
+      <!-- MENU BUTTON -->
+      <div class="header__menu-button">
+        <button class="hamburger hamburger--spin js-menu-button" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+          <span class="hamburger-label"></span>
+        </button>
+      </div>
+      <!-- HEADER NAVIGATION -->
       <nav class="header__navigation">
         <ul class="header-navigation__list">
           <li class="header-navigation__item"><a class="header-navigation__link" href="#">Home</a></li>
