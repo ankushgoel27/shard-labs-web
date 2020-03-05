@@ -1,3 +1,5 @@
+@import 'colors';
+
 .header {
   color: $primary-font-color;
   margin-top: 1rem;
@@ -44,6 +46,11 @@
 }
 
 .header-navigation {
+
+  @media only screen and (max-width: 992px) {
+    height: 40px;
+  }
+
   &__list {
     display: flex;
     justify-content: flex-end;
