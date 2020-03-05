@@ -5,6 +5,7 @@
 @import 'button';
 @import 'override';
 @import 'scroller';
+@import 'overlay';
 @import 'vendor/hamburgers';
 
 html {
@@ -19,6 +20,10 @@ body {
     color: $primary-color;
     background: #fff;
     font-weight: 400;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {

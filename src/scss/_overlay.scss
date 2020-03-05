@@ -1,0 +1,49 @@
+.overlay {
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 100vh;
+    background: #0d1017;
+    z-index: 99;
+    transition: .5s;
+
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
+
+    &--is-active {
+        width: 100vw;
+    }
+
+
+
+    &__navigation {
+        color: #fff;
+    }
+}
+
+.overlay-navigation {
+    &__list {
+        @include list-reset;
+    }
+
+    &__item {
+        padding: .8rem;
+    }
+
+    &__link {
+        @include link-reset;
+
+        display: inline-block;
+        font-size: 1.2em;
+        font-weight: 500;
+        letter-spacing: .03rem;
+
+        &:hover {
+            @include link-reset;
+        }
+    }
+}
