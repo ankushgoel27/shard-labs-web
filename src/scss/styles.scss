@@ -1,7 +1,7 @@
 @import 'mixins';
+@import 'colors';
 @import 'typo';
 @import 'header';
-@import 'colors';
 @import 'button';
 @import 'override';
 @import 'scroller';
@@ -12,7 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
     font-size: 14px;
     line-height: 1.71429;
@@ -20,6 +19,10 @@ body {
     color: $primary-color;
     background: #fff;
     font-weight: 400;
+
+    @media only screen and (max-width: 992px) {
+      overflow: visible;
+  }
 }
 
 .no-scroll {

@@ -1,8 +1,5 @@
-$white-color: #fff;
-$accent-color: #ff5252;
-
 .header {
-  color: $white-color;
+  color: $primary-font-color;
   margin-top: 1rem;
 
   &--transparent {
@@ -29,7 +26,7 @@ $accent-color: #ff5252;
 
       @media only screen and (max-width: 992px) {
         height: 40px;
-    }
+      }
     }
   }
 
@@ -41,7 +38,7 @@ $accent-color: #ff5252;
 
   &__navigation {
     @media only screen and (max-width: 992px) {
-        display: none;
+      display: none;
     }
   }
 }
@@ -56,7 +53,6 @@ $accent-color: #ff5252;
     list-style: none;
   }
 
-  /* TODO: Add hamburger menu instead of setting display to none */
   &__item {
     margin: 0 1rem;
 
@@ -75,23 +71,23 @@ $accent-color: #ff5252;
     display: inline-block;
     font-size: 1.2em;
     font-weight: 500;
-    letter-spacing: .03rem;
+    letter-spacing: 0.03rem;
 
     &::after {
-        content: '';
-        margin-top: .7rem;
-        height: .2rem;
-        display: block;
-        background: $accent-color;
-        width: 0;
-        transition: width .3s;
+      content: "";
+      margin-top: 0.7rem;
+      height: 0.2rem;
+      display: block;
+      background: $accent-color;
+      width: 0;
+      transition: width 0.3s;
     }
 
     &:hover {
-        @include link-reset;
-        &::after {
-            width: 100%;
-        }
+      @include link-reset;
+      &::after {
+        width: 100%;
+      }
     }
   }
 }
