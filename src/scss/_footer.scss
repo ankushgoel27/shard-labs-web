@@ -1,7 +1,9 @@
-$footer-text-color: #6c757d;
+$footer-background-color: #0d1017;
+$footer-text-color: hsla(0, 0%, 100%, 0.635);
+$footer-icons-hover-color: #fff;
 
 .footer {
-  background-color: #0d1017;
+  background-color: $footer-background-color;
   width: 100vw;
 
   &__container {
@@ -52,7 +54,7 @@ $footer-text-color: #6c757d;
     &:hover {
       svg {
         path {
-          fill: #fff;
+          fill: $footer-icons-hover-color;
           transition: 0.4s ease-in-out;
         }
       }
