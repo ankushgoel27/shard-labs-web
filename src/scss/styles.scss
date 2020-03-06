@@ -1,8 +1,17 @@
+@import 'mixins';
+@import 'colors';
 @import 'typo';
 @import 'header';
-@import 'colors';
+@import 'footer';
 @import 'button';
 @import 'override';
+@import 'scroller';
+@import 'overlay';
+@import 'vendor/hamburgers';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
     font-size: 14px;
@@ -11,6 +20,15 @@ body {
     color: $primary-color;
     background: #fff;
     font-weight: 400;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 992px) {
+      overflow: visible;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
@@ -33,6 +51,7 @@ body {
         display: inline-block;
         font-size: 5rem;
         font-weight: 600;
+        animation: text-shadow 1.5s ease-in-out infinite;
 
         &:after {
             content: "";
@@ -43,8 +62,13 @@ body {
             padding: 1rem 0;
         }
 
+        @media only screen and (max-width: 992px) {
+          font-size: 4rem;
+          line-height: 1.2;
+        }
+
         @media only screen and (max-width: 767px) {
-            font-size: 2.8rem;
+            font-size: 3rem;
             line-height: 1.2;
         }
     }
@@ -56,7 +80,7 @@ body {
         margin: 0;
 
         @media only screen and (max-width: 767px) {
-          font-size: 1rem;
+          font-size: 1.4rem;
           line-height: 1.8;
         }
     }
