@@ -4,7 +4,7 @@ $footer-icons-hover-color: #fff;
 
 .footer {
   background-color: $footer-background-color;
-  width: 100vw;
+  width: 100%;
 
   &__container {
     display: flex;
@@ -29,9 +29,9 @@ $footer-icons-hover-color: #fff;
 }
 
 .social-group {
+  
   &__list {
     @include list-reset;
-
     display: inline-flex;
   }
 
@@ -48,6 +48,7 @@ $footer-icons-hover-color: #fff;
 
       path {
         fill: $footer-text-color;
+        transition: all 0.3s ease-in-out;
       }
     }
 
@@ -55,7 +56,6 @@ $footer-icons-hover-color: #fff;
       svg {
         path {
           fill: $footer-icons-hover-color;
-          transition: 0.4s ease-in-out;
         }
       }
     }
