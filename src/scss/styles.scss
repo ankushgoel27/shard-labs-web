@@ -2,6 +2,7 @@
 @import 'colors';
 @import 'typo';
 @import 'header';
+@import 'footer';
 @import 'button';
 @import 'override';
 @import 'scroller';
@@ -19,6 +20,7 @@ body {
     color: $primary-color;
     background: #fff;
     font-weight: 400;
+    overflow-x: hidden;
 
     @media only screen and (max-width: 992px) {
       overflow: visible;
