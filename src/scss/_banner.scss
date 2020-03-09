@@ -1,0 +1,49 @@
+.banner {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#00010c80,#00010cca), url('../assets/bg-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    color: #fff;
+
+    .leading-title {
+        display: inline-block;
+        font-size: 5rem;
+        font-weight: 600;
+        animation: text-shadow 1.5s ease-in-out infinite;
+
+        &:after {
+            content: "";
+            position: relative;
+            width: 20px;
+            height: 4px;
+            color: #3272ba;
+            padding: 1rem 0;
+        }
+
+        @media only screen and (max-width: 992px) {
+          font-size: 4rem;
+          line-height: 1.2;
+        }
+
+        @media only screen and (max-width: 767px) {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+
+    }
+
+    .leading-paragraph {
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 2;
+        margin: 0;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 1.4rem;
+          line-height: 1.8;
+        }
+    }
+}
