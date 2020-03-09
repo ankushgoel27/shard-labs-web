@@ -1,3 +1,5 @@
+$banner-font-color: #fff;
+
 .banner {
     display: flex;
     align-items: center;
@@ -6,33 +8,26 @@
     background-size: cover;
     background-position: 50%;
     height: 100vh;
-    color: #fff;
+    color: $banner-font-color;
 
     .leading-title {
         display: inline-block;
+        line-height: 1.2;
         font-size: 5rem;
         font-weight: 600;
         animation: text-shadow 1.5s ease-in-out infinite;
 
-        &:after {
-            content: "";
-            position: relative;
-            width: 20px;
-            height: 4px;
-            color: #3272ba;
-            padding: 1rem 0;
-        }
-
         @media only screen and (max-width: 992px) {
           font-size: 4rem;
-          line-height: 1.2;
         }
 
         @media only screen and (max-width: 767px) {
             font-size: 3rem;
-            line-height: 1.2;
         }
 
+        @media only screen and (max-height: 768px) {
+            font-size: 3rem;
+        }
     }
 
     .leading-paragraph {
@@ -44,6 +39,10 @@
         @media only screen and (max-width: 767px) {
           font-size: 1.4rem;
           line-height: 1.8;
+        }
+
+        @media only screen and (max-height: 768px) {
+            font-size: 1.2rem;
         }
     }
 }
