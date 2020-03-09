@@ -3,10 +3,11 @@ $banner-font-color: #fff;
 .banner {
     display: flex;
     align-items: center;
-    background: linear-gradient(#00010c80,#00010cca), url('../assets/bg-image.jpg');
+    background: linear-gradient(#00010c80,#00010ca4), url('../assets/bg-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
+    background-attachment: fixed;
     height: 100vh;
     color: $banner-font-color;
 
