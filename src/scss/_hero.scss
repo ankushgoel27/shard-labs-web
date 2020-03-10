@@ -1,6 +1,6 @@
-$banner-font-color: #fff;
+$hero-font-color: #fff;
 
-.banner {
+.hero {
     display: flex;
     align-items: center;
     /* Banner designed by fullvector */
@@ -10,14 +10,13 @@ $banner-font-color: #fff;
     background-position: 50%;
     background-attachment: fixed;
     height: 100vh;
-    color: $banner-font-color;
+    color: $hero-font-color;
 
     .leading-title {
         display: inline-block;
         line-height: 1.2;
         font-size: 5rem;
         font-weight: 600;
-        animation: text-shadow 1.5s ease-in-out infinite;
 
         @media only screen and (max-width: 992px) {
           font-size: 4rem;

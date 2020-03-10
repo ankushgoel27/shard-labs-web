@@ -9,8 +9,7 @@
 @import 'button';
 @import 'scroller';
 @import 'overlay';
-@import 'banner';
-@import 'team-section';
+@import 'hero';
 
 // Vendor components
 @import 'vendor/hamburgers';
@@ -57,6 +56,39 @@ body {
 
   &--secondary {
     background: $gray-color;
+  }
+
+  &--banner {
+    background: linear-gradient(#00010c80,#00010ca4), url('../assets/bg.jpeg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+
+    .banner-container {
+      color: #fff;
+      text-align: center;
+
+      &__title {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: 992px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &__content {
+        font-size: 1.8rem;
+        font-weight: 300;
+
+        @media only screen and (max-width: 992px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 
   &__title {
