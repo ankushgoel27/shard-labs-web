@@ -3,7 +3,8 @@ $banner-font-color: #fff;
 .banner {
     display: flex;
     align-items: center;
-    background: linear-gradient(#00010c80,#00010ca4), url('../assets/banner.png');
+    /* Banner designed by fullvector */
+    background: linear-gradient(#00010c80,#00010ca4), url('../assets/banner.png'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
