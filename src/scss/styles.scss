@@ -111,7 +111,7 @@ body {
     color: #fff;
     box-shadow: 0 10px 25px 10px rgba(0,0,0,.1);
     transform: translateY(-5px);
-    background: linear-gradient(145deg, $accent-color, darken($accent-color, 10%));
+    background: linear-gradient(145deg, $gradient-color1, $gradient-color2);
 
     .icon svg path {
       fill: #fff;
@@ -130,7 +130,7 @@ body {
       height: 4em;
 
       path {
-        fill: $accent-color;
+        fill: $gradient-color1;
       }
     } 
   }
