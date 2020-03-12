@@ -16,7 +16,7 @@
 
     &--primary {
         color: #fff;
-        background: linear-gradient(145deg, $accent-color, darken($accent-color, 10%));
+        background: linear-gradient(145deg, $gradient-color1, $gradient-color2);
         transition: all 0.3s ease;
     
         &:hover {
