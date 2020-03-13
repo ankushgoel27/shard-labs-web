@@ -1,0 +1,21 @@
+version: 2.1
+
+jobs:
+  build_push_docker:
+    docker:
+      - image: circleci/node:10.19.0-buster
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: ./scripts/publish_images.sh
+      
+workflows:
+  version: 2.1
+  build_and_deploy:
+    jobs:
+      - build_push_docker:
+          context: shardlabs
+          filters:
+            branches:
+              only: 
+              - master
