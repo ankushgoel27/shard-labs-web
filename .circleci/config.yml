@@ -28,11 +28,11 @@ workflows:
           filters:
             branches:
               only: 
-              - circleCI
+              - master
       - deploy:
           filters:
             branches:
               only:
-              - circleCI
+              - master
           requires:
           - build_push_docker
