@@ -3,13 +3,6 @@ services:
   shard-labs-web:
     image: shardlabs/shard-labs-web:latest
     container_name: shard-labs-web
-    build: 
-      context: .
-      dockerfile: Dockerfile
     ports:
     - "80:5000"
-    networks: 
-    - web-network
     restart: always
-networks: 
-  web-network:

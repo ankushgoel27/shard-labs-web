@@ -1,17 +1,8 @@
-FROM node:10 as builder
+FROM node:14.15.1
 WORKDIR /app
-
-COPY package.json .
-RUN npm install
 
 COPY . .
+RUN npm install
 RUN npm run build
 
-FROM node:10-alpine
-WORKDIR /app
-
-COPY --from=builder /app/package.json .
-COPY --from=builder /app/dist ./dist
-
-RUN npm install serve
 CMD ["npm", "run", "serve"]

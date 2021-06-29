@@ -8,6 +8,21 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: ./scripts/publish_images.sh
+
+  deploy:
+    docker:
+      - image: circleci/node:10.19.0-buster
+    steps:
+      - checkout
+      - setup_remote_docker
+      - add_ssh_keys:
+          fingerprints:
+            - "cd:48:22:41:ab:e5:70:b7:5f:8a:7d:5a:dc:56:c7:03"
+      - run:
+          name: Deploy
+          command: |
+            ./scripts/deploy.sh
+
       
 workflows:
   version: 2.1
@@ -19,3 +34,12 @@ workflows:
             branches:
               only: 
               - master
+      - deploy:
+          requires:
+           - build_push_docker
+          filters:
+            branches:
+              only:
+              - master
+
+      
