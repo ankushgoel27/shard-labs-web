@@ -16,20 +16,23 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 14px;
+    width: 100vw;
+    padding: 4.5rem 9rem;
+    font-size: 1.4rem;
     line-height: 1.71429;
     font-family: $ff-primary;
     color: $primary-color;
-    background: #fff;
+    background: #000;
     font-weight: 400;
-    overflow-x: hidden;
-
-    @media only screen and (max-width: 992px) {
-      overflow: visible;
-  }
+    height: 94vh;
+    overflow: hidden;
+    @media only screen and (max-width: 570px) {
+      padding: 2rem 4rem;
+    }
 }
 
 .no-scroll {
@@ -59,7 +62,7 @@ body {
   }
 
   &--banner {
-    background: linear-gradient(#00010c80,#00010ca4), url('../assets/bg.jpeg'); 
+    background: linear-gradient(#00010c80,#00010ca4), url('../assets/bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -113,14 +116,14 @@ body {
 
       @media only screen and (min-width: 1200px) {
         padding: 0 20%;
-      }   
+      }
     }
   }
 }
 
 .thumbnail {
   display: block;
-  
+
   img {
     max-height: 700px;
     width: 100%;
@@ -157,7 +160,7 @@ body {
 
   .icon {
     margin-bottom: 25px;
-  
+
     svg {
       width: 4em;
       height: 4em;
@@ -165,7 +168,7 @@ body {
       path {
         fill: $gradient-color1;
       }
-    } 
+    }
   }
 
   .content {
@@ -176,7 +179,7 @@ body {
       text-overflow: ellipsis;
       overflow: hidden;
     }
-  
+
     p {
       font-size: 18px;
       color: $secondary-color;

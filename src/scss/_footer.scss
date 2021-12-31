@@ -3,73 +3,20 @@ $footer-text-color: hsla(0, 0%, 100%, 0.635);
 $footer-icons-hover-color: #fff;
 
 .footer {
-  background-color: $footer-background-color;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0 2rem;
-    text-align: center;
+  &-copyright {
+    color: #F8F8F8;
   }
 
-  &__social-group {
-    margin-top: 1rem;
-  }
-
-  &__company-information {
-    margin: 1rem 0;
-  }
-
-  &__copyright {
-    margin-bottom: 1rem;
-  }
-}
-
-.social-group {
-  
-  &__list {
-    @include list-reset;
-    display: inline-flex;
-  }
-
-  &__item {
-    padding: 1rem;
-  }
-
-  &__link {
-    @include link-reset;
-
-    svg {
-      height: 2rem;
-      width: 2rem;
-
-      path {
-        fill: $footer-text-color;
-        transition: all 0.3s ease-in-out;
-      }
-    }
-
-    &:hover {
-      svg {
-        path {
-          fill: $footer-icons-hover-color;
-        }
-      }
+  &-social {
+    &__item {
+      cursor: pointer;
+      margin-right: 1.5rem;
     }
   }
-}
 
-.company-information {
-  &__text {
-    color: $footer-text-color;
-  }
-}
-
-.copyright {
-  &__text {
-    color: $footer-text-color;
-  }
 }
