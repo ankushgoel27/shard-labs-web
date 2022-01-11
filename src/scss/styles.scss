@@ -17,11 +17,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  overflow-x: visible;
+  overflow-x: hidden
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     padding: 4.5rem 9rem;
     font-size: 1.4rem;
     line-height: 1.71429;
@@ -34,6 +34,10 @@ body {
     @media only screen and (max-width: 570px) {
       padding: 2rem 4rem;
     }
+  }
+  
+main {
+  width: 100%;
 }
 
 .no-scroll {
