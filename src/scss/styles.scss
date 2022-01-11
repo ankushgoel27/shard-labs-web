@@ -17,6 +17,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+  overflow-x: visible;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
     background: #000;
     font-weight: 400;
     height: 94vh;
-    overflow: hidden;
+    overflow-x: hidden;
     @media only screen and (max-width: 570px) {
       padding: 2rem 4rem;
     }
