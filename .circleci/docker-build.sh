@@ -12,6 +12,6 @@ VERSION=$(
             mkdir /tmp/artifacts
             cp result.json /tmp/artifacts
             aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin 801546505238.dkr.ecr.eu-central-1.amazonaws.com
-            docker tag polido-frontend:latest 801546505238.dkr.ecr.eu-central-1.amazonaws.com/shardlabs-web:${CIRCLE_BRANCH}
+            docker tag shardlabs-web:latest 801546505238.dkr.ecr.eu-central-1.amazonaws.com/shardlabs-web:${CIRCLE_BRANCH}
             docker push 801546505238.dkr.ecr.eu-central-1.amazonaws.com/shardlabs-web:${CIRCLE_BRANCH}
 
